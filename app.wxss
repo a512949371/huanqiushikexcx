@@ -1,0 +1,74 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+.flex-box{
+  display: flex
+}
+.flex-box-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-box-start{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start
+}
+.flex-box-bwteen{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.flex-box-end{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.pos{
+  position: relative;
+  padding: 0
+}
+.bor-bottom{
+  border-bottom: 1px solid #e6e6e6
+}
+.pd20{
+  padding: 20rpx;
+}
+.pd30{
+  padding: 30rpx;
+}
+.pt10{
+  padding-top: 10rpx;
+}
+.pt20{
+  padding-top: 20rpx;
+}
+.pt30{
+  padding-top: 30rpx;
+}
+.pt40{
+  padding-top: 40rpx;
+}
+.pb20{
+  padding-bottom: 20rpx;
+}
+.pl20{
+  padding-left: 20rpx;
+}
+.pl40{
+  padding-left: 40rpx;
+}
+.pr20{
+  padding-right: 20rpx;
+}
+.pb10{
+  padding-bottom: 10rpx;
+}
+.ml20{
+  margin-left: 20rpx;
+}
+.mt30{
+  margin-top: 30rpx;
+}
+.mt40{
+  margin-top: 40rpx;
+}

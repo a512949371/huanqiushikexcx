@@ -1,0 +1,57 @@
+/* pages/initpage/initpage.wxss */
+
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.initpage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+.initpagetext{
+  padding-top: 80rpx;
+}
+.initpagetext  image{
+  width: 707rpx;
+  height: 827rpx;
+}
+
+.num {
+    align-items: center;
+    justify-content: center;
+    opacity: 2;
+    color: #fefefe;
+    font-size: 32rpx;
+    text-align: center;
+}
+
+.userbtn-box {
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    left: 35%;
+    right: 35%;
+    bottom: 30px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 99;
+    border-radius: 10rpx;
+}
+
+.userbtn {
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    left: 35%;
+    right: 35%;
+    bottom: 30px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #24C37E;
+    z-index: 100;
+    border-radius: 50rpx;
+    border:1px solid #24C37E
+}

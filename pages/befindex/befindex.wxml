@@ -1,0 +1,9 @@
+<!--pages/befindex/befindex.wxml-->
+<!--pages/initpage/initpage.wxml-->
+<view class='initpage'>
+  <view class='initpagetext'>
+  <image src='http://qqgpimg.txw18.com/ills.png'></image>
+  </view>
+  <view class='userbtn-box'></view>
+  <button class='userbtn' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>确认授权</button>
+</view>

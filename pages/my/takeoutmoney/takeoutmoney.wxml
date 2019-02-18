@@ -1,0 +1,31 @@
+<!--pages/my/takeoutmoney/takeoutmoney.wxml-->
+<view class='page-box'>
+  <view class='top-bg bgfff'>
+   <view class='bank-box flex-box-bwteen bor-bottom' bindtap='_gobanklist' wx:if="{{detail.hasWithdrawNo}}">
+     <view class='left'>
+       <view class='bank-name'>{{bankinfo.bankName}}</view>
+       <view class='bank-number'>尾号{{bankinfo.bankNo}}<text class='pl20'></text></view>
+     </view>
+     <image class='right' src='/images/icon_leftq.png'></image>
+   </view>
+   <view class='bank-box flex-box-bwteen bor-bottom' wx:else bindtap='_gocreatebank'>
+   <view class='left flex-box'>
+    <image  class='img' src='/images/icon_add.png'></image>
+    <view class='bank-name pl20'>添加提现账号</view>
+   </view>
+   <image class='right' src='/images/icon_leftq.png'></image>
+   </view>
+   <view class='rate-box'>提现金额（当前费率：<text wx:if="{{detail.type===0}}">{{detail.fee}}</text><text wx:else>{{detail.fee}}%</text>）</view>
+   <view class='money-box flex-box bor-bottom'>
+    <view class='left'>￥</view>
+    <input class='right' type='digit' bindinput='_input' value='{{amount}}'></input>
+   </view>
+   <view class='rate-box flex-box-bwteen'>
+    <view class='left'>到账金额：{{money}}</view>
+    <view class='tip'>可提现金额：{{detail.price}}</view>
+   </view>
+   <view class='btn-box flex-box-center'>
+    <view class='btn' data-id='{{detail.id}}' bindtap='_save'>提交提现申请</view>
+   </view>
+  </view>
+</view>

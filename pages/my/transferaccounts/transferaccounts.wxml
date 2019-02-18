@@ -1,0 +1,21 @@
+<!--pages/my/transferaccounts/transferaccounts.wxml-->
+<view class='page-box'>
+ <view class='info-box bgfff' hidden='{{isshow}}'>
+    <view class='info bor-bottom flex-box'>
+      <view class='desc'>收款人账户</view>
+      <input class='input' bindinput='_inputdata' data-num='1' placeholder-style='color:#c8c8c8' placeholder='输入收款人账户'></input>
+    </view>
+    <view class='info bor-bottom flex-box mt40'>
+      <view class='desc'>转入金额</view>
+      <input class='input' bindinput='_inputdata' data-num='2' type='digit' placeholder-style='color:#c8c8c8' placeholder='输入转入金额'></input>
+    </view>
+    <view class='info bor-bottom flex-box mt40'>
+      <view class='desc'>支付密码</view>
+      <input class='input' bindinput='_inputdata' data-num='3' password="{{true}}"  placeholder-style='color:#c8c8c8' placeholder='输入支付密码'></input>
+    </view>
+    <view class='desc bgfff pt60'>转到收款人账户余额中</view>
+    <view class='btn-box flex-box-center bgfff'>
+      <view class='btn' bindtap='_save'>转账</view>
+    </view>
+  </view>
+</view>

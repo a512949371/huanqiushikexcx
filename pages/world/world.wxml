@@ -1,0 +1,243 @@
+<!-- pages/world/world.wxml -->
+<view class='page-box' wx:if="{{islogin&&isadmin}}">
+  <view class='top-bg'>
+    <view class='img-box'>
+      <view class='mian-box'>
+        <view class='vip-box pos'>
+          {{shopdata.balance||0}}
+          <view class='vip'>
+            <image src='../../images/icon_vip-1.png'></image>
+            <text>VIP.{{shopdata.level}}</text>
+          </view>
+        </view>
+        <view class='more-money'>积分余额></view>
+        <view class='tree-box '>
+          <view class='pos'>
+            <image class='tree' src='../../images/icon_mintree.png'></image>
+          </view>
+        </view>
+        <view class='flex-box-center'>
+          <view class='share-box' bindtap='_goshare'>邀请好友</view>
+        </view>
+        <view class='parameter-box flex-box'>
+          <view class='parameter' bindtap='Gocum'>
+            <view class='number'>{{shopdata.cumulativeBonus||0}}</view>
+            <view class='desc'>总奖金></view>
+          </view>
+          <view class='parameter' bindtap='Govips'>
+            <view class='number'>{{shopdata.shareNum||0}}</view>
+            <view class='desc'>分享人数></view>
+          </view>
+          <view class='parameter'>
+            <view class='number'>{{shopdata.groupNum||0}}</view>
+            <view class='desc'>团队人数></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tit-box flex-box-center'>
+    <view class='line'></view>
+    <view class='tit'>全球排位系统</view>
+    <view class='line'></view>
+  </view>
+  <view class='classification-box bgfff'>
+    <view class='classification-nav flex-box'>
+      <view class='box flex-box-center' bindtap='_changenav' data-type='1'>
+        <text class='text {{navindex==1?"active":""}}'>已排位<text wx:if="{{navindex==1}}">({{shopdata.listTotal}})</text></text>
+      </view>
+      <view class='box flex-box-center' bindtap='_changenav' data-type='2'>
+        <text class='text {{navindex==2?"active":""}}'>排位中<text wx:if="{{navindex==2}}">({{shopdata.listTotal}})</text></text>
+      </view>
+      <view class='box flex-box-center' bindtap='_changenav' data-type='3'>
+        <text class='text {{navindex==3?"active":""}}'>已出局<text wx:if="{{navindex==3}}">({{shopdata.listTotal}})</text></text>
+      </view>
+    </view>
+    <view class='classification-data'>
+     <block wx:if="{{navindex==1}}" wx:for="{{shopdatalist}}"  wx:key="{{item.accountSubId}}">
+      <view class='pt40' >
+        <view class='bg-box bg-light-green pos'>
+          <view class='position-box light-green'>
+            {{item.groupName}}·{{item.position}}
+          </view>
+          <view class='pt30 pl20 pr20'>
+            <view class='order-numer '>{{item.accountNo}}</view>
+            <view class='reward-box flex-box-bwteen'>
+              <view>公排奖励:{{item.reward}}</view>
+              <view>已超过全球{{item.percentage}}%</view>
+            </view>
+            <view>
+              <view class='progress-box pos'>
+                <view class='progress' style='width:{{item.percentage}}%'></view>
+              </view>
+              <view class='progress-add flex-box-bwteen'>
+                <view class='add'>{{item.groupName}}</view>
+                <view class='center'>还差{{item.differenceNum}}单</view>
+                <view class='add'>{{item.nextGroupName}}</view>
+              </view>
+              <view class='goout-btn-box flex-box-bwteen'>
+                <view class='goout-money'>额外累积奖励:{{item.otherReward}}</view>
+                <view class='goout-btn' bindtap='_gogetoutmoney' data-id='{{item.accountSubId}}' data-groupid='{{item.groupName}}'>提现出局</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+      <block wx:if="{{navindex==2}}" wx:for="{{shopdatalist}}"  wx:key="{{item.accountSubId}}">
+      <view class='pt40'>
+        <view class='bg-box bg-orange pos'>
+          <view class='position-box orange'>
+            排位中
+          </view>
+          <view class='pt30 pl20 pr20'>
+            <view class='order-numer '>{{item.accountNo}}</view>
+            <view class='reward-box'>
+              <view>公排奖励:{{item.reward}}</view>
+            </view>
+            <view>
+              <view class='flex-box-center'>
+                <image src='../../images/icon_time.png' class='img_time'></image>
+              </view>
+              <view class='time-desc'>系统排队中</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+      <block wx:if="{{navindex==3}}" wx:for="{{shopdatalist}}"  wx:key="{{item.accountSubId}}">
+      <view class='pt40'>
+        <view class='bg-box bg-gray pos'>
+          <view class='position-box gray'>
+            {{item.groupName}}·{{item.position}}
+          </view>
+          <view class='pt30 pl20 pr20'>
+            <view class='order-numer '>{{item.accountNo}}</view>
+            <view class='reward-box flex-box-bwteen'>
+              <view>公排奖励:{{item.reward}}</view>
+              <view>已出局</view>
+            </view>
+            <view>
+              <view class='flex-box-center'>
+                <image src='../../images/icon_out.png' class='img_time'></image>
+              </view>
+              <view class='out-desc pt20'>出局时间：{{item.outgoingTime}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view> 
+
+<view class='page-box' wx:if="{{islogin&&!isadmin}}">
+  <view class='top-bg'>
+    <view class='img-box'>
+      <view class='mian-box'>
+        <view class='vip-box pos pt40'>
+          {{shopdata.balance||0}}
+        </view>
+        <view class='more-money'>积分余额></view>
+        <view class='flex-box-center pt70'>
+          <view class='share-box' bindtap='_goshare'>邀请好友</view>
+        </view>
+        <view class='parameter-box flex-box'>
+          <view class='parameter'>
+            <view class='number'>{{shopdata.cumulativeBonus||0}}</view>
+            <view class='desc'>总奖金></view>
+          </view>
+          <view class='parameter'>
+            <view class='number'>{{shopdata.shareNum||0}}</view>
+            <view class='desc'>分享人数></view>
+          </view>
+          <view class='parameter'>
+            <view class='number'>{{shopdata.groupNum||0}}</view>
+            <view class='desc'>团队人数></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='tit-box flex-box-center'>
+    <view class='line'></view>
+    <view class='tit'>您还没有公排账号</view>
+    <view class='line'></view>
+  </view>
+  <view class='no-classification-box bgfff'>
+    <view class='no-classification-header'>全球公排账号特权</view>
+    <view class='img-box flex-box'>
+     <view class='box'>
+      <view class='img flex-box-center'>
+     <image src='/images/tq-1.png'></image>
+     </view>
+     <view class='desc'>自买省钱</view>
+     </view>
+     <view class='box'>
+      <view class='img flex-box-center'>
+     <image src='/images/tq-2.png'></image>
+     </view>
+     <view class='desc'>出局分红</view>
+     </view>
+     <view class='box'>
+      <view class='img flex-box-center'>
+     <image src='/images/tq-3.png'></image>
+     </view>
+     <view class='desc'>推广赚钱</view>
+     </view>
+    </view>
+    <!-- <view class='tip-box'>1.以销量决定段数分成，销量达到即可获得分红</view>
+    <view class='tip-box'>2.推广赚钱，激活创业名额即可获得分红</view>
+    <view class='tip-box'>3.自买省钱，自买商品每段结算可以返还分红</view> -->
+    <view class='btn-box flex-box-center'>
+      <view class='btn' bindtap='_goshop'>去购买公排产品</view>
+    </view>    
+  </view>
+</view>
+
+<view class='no-login bgfff' style='height:{{pageheight}}px' wx:if="{{!islogin}}">
+  <view class='login-box'>
+   <view class='flex-box-center'><image src='/images/user-1.png'></image></view>
+   <view class='desc pt40'>您还未登录</view>
+   <view class='tip pd20'>登录后即可查看</view>
+   <view class='btn-box flex-box-center'>
+    <view class='btn' bindtap='_gologin' wx:if="{{isauthorization}}">立即登录</view>
+    <button class='btn' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' wx:else>登录授权</button>
+   </view>
+  </view>
+</view>
+<view class='share-box' hidden='{{isshow}}' catchtouchmove="{{true}}">
+  <view class='shaw'></view>
+  <view class='share' style='top:{{canvasbox.top}};bottom:{{canvasbox.bottom}}'>
+    <view class='close-btn' bindtap='_closeshare'>
+      <image src='/images/icon_close.png'></image>
+    </view>
+    <view class='canvas-box' style='width:{{usewidth+"px"}};height:{{useheight+"px"}}'>
+      <canvas canvas-id='Share' style="width: 100%;height: 100%;z-index:100"></canvas>
+    </view>
+    <view class='btn-box'>
+      <view class='flex-box-center'>
+        <block wx:for="{{sharemode}}" wx:key="{{item.sharetype}}">
+          <view class='btn pos' bindtap='saveImg' data-sharetype='{{item.sharetype}}'>
+            <view class='flex-box-center'>
+              <image src='{{item.shareicon}}'></image>
+            </view>
+            <view class='pt20'>{{item.sharedesc}}</view>
+            <button class='share-btn' open-type='share'  wx:if="{{item.sharetype==1}}"></button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='open-seting-bg' wx:if='{{openSet}}' catchtap='cancleSet'>
+  <view class='open-set-inner'>
+    <view class='set-title'>是否打开授权设置？</view>
+    <view class='btn-openset'>
+      <view catchtap='cancleSet'>取消</view>
+          <view>
+              <button open-type='openSetting' class='button-style' catchtap='cancleSet'>确定</button>
+          </view>
+    </view>
+  </view>
+</view>

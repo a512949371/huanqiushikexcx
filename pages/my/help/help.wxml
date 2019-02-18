@@ -1,0 +1,5 @@
+<!--pages/index/newdetail/newdetail.wxml-->
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class='pd30'>
+ <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

@@ -1,0 +1,84 @@
+/* pages/my/takeoutmoney/takeoutmoney.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f0f0f0;
+}
+.bgfff{
+  background-color: #fff;
+}
+.page-box{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg{
+ padding: 30rpx;
+ border-radius: 10rpx;
+}
+.bank-box{
+  padding-bottom: 20rpx;
+}
+.bank-box .left{
+  flex: 1;
+  align-items: center
+}
+.bank-box .left .img{
+  width: 48rpx;
+  height: 48rpx;
+  display: block
+}
+.bank-box .left .bank-name{
+  font-size: 26rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.bank-box .left .bank-number{
+  font-size: 26rpx;
+  color: #646464;
+  padding: 10rpx 0;
+}
+.bank-box .right{
+  width: 14rpx;
+  height: 21rpx;
+  display: block
+}
+.rate-box{
+  font-size: 26rpx;
+  color: #646464;
+  padding: 30rpx 0;
+}
+.rate-box .tip{
+  font-size: 26rpx;
+  color: #1BACFF
+}
+.money-box{
+  padding-bottom: 20rpx;
+}
+.money-box .left{
+  font-size: 60rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.money-box .right{
+  flex: 1;
+  line-height: 80rpx;
+  height: 80rpx;
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 60rpx;
+  color: #333;
+  outline: none
+}
+.btn-box{
+  padding: 60rpx;
+  padding-bottom: 40rpx;
+}
+.btn-box .btn{
+  background-color: #24C37E;
+  border-radius: 50rpx;
+  padding: 25rpx 0;
+  text-align: center;
+  flex: 1;
+  color: #fff;
+  font-size: 32rpx;
+}

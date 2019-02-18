@@ -1,0 +1,62 @@
+<!--pages/outoffice/outoffice.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='money-box pos'>{{detail.withdrawOutPrice}}
+      <view class='add-box'>位置：{{detail.currentPosition}}</view>
+    </view>
+    <view class='tip-box'>出局可提现金额</view>
+    <view class='out-btn flex-box-center pt20 pb20'>
+      <view class='btn' bindtap='_save' data-minid=''>{{detail.currentOutPosition}}团出局</view>
+    </view>
+    <view class='number-box bgfff flex-box'>
+      <view class='number'>
+        <view class='num'>{{detail.effectiveNum}}</view>
+        <view class='desc pt20'>有效直推人数</view>
+      </view>
+      <view class='number'>
+        <view class='num'>{{detail.orderNum}}</view>
+        <view class='desc pt20'>购买单数</view>
+      </view>
+      <view class='number'>
+        <view class='num'>{{detail.effectiveTeamNum}}</view>
+        <view class='desc pt20'>有效团队人数</view>
+      </view>
+    </view>
+    <view class='more-box bgfff'>
+      <view class='more-desc pd30'>您还能获得更高的累积奖励</view>
+      <view class='list-box'>
+       <block wx:for="{{detail.accountRankDTOList}}" wx:key="{{index}}">
+        <view class='box' wx:if="{{!item.rankWait}}">
+          <view class='data-top flex-box-bwteen'>
+            <view class='add'>{{item.groupName}}团</view>
+            <view class='num'>{{item.rankReward}}</view>
+          </view>
+          <view class='desc-box flex-box-bwteen'>
+            <view class='left'>直推人数：{{item.recommendedNum}}</view>
+            <view class='right'>差{{item.differRecommendedNum}}人</view>
+          </view>
+          <view class='desc-box flex-box-bwteen'>
+            <view class='left'>共购买：{{item.totalOrder}}</view>
+            <view class='right'>差{{item.differTotalOrder}}单</view>
+          </view>
+          <view class='desc-box flex-box-bwteen'>
+            <view class='left'>团队人数：{{item.groupAccountNum}}</view>
+            <view class='right'></view>
+          </view>
+        </view>
+        <view class='box' wx:else>
+          <view class='data-top flex-box-bwteen'>
+            <view class='add '>{{item.groupName}}团</view>
+            <view class='num'>{{item.rankReward}}</view>
+          </view>
+          <view class='desc-box flex-box-bwteen'>
+            <view class='left red'>排位等待</view>
+            <view class='right'>差{{item.differTotalOrder}}单</view>
+          </view>
+        </view>
+        </block>
+        
+      </view>
+    </view>
+  </view>
+</view>

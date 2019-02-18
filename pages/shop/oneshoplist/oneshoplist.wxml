@@ -1,0 +1,20 @@
+<!--pages/shop/oneshoplist/oneshoplist.wxml-->
+ <view class='shop-box flex-box'>
+  <block wx:for="{{shopdata}}" wx:key="{{index}}">
+  <view class='shop' bindtap='_goshopdetail' data-id='{{item.id}}'>
+   <view class='boradus bgfff'>
+   <view class='flex-box-center pos'>
+     <image src='{{item.imgUrl}}'></image>
+     <view class='world-shop' wx:if="{{item.model}}">
+      公排产品
+     </view>
+   </view>
+   <view class='pd20'>
+    <view class='shop-name pb10'>{{item.title}}</view>
+    <view class='shop-desc'>{{item.content}}</view>
+    <view class='shop-price pt10'><text class='text'>￥{{item.price}}</text>/{{item.guige}}</view>
+   </view>
+   </view>
+  </view>
+ </block>
+ </view>

@@ -1,0 +1,150 @@
+/* pages/my/my.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/geren_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg .user-info-box{
+  width: 100%;
+  align-items: center
+}
+.top-bg .user-info-box .header-img-box{
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  overflow: hidden
+}
+.top-bg .user-info-box .header-img-box image{
+  width: 116rpx;
+  height: 116rpx;
+  display: block
+}
+.top-bg .user-info-box .user-info{
+  flex: 1
+}
+.top-bg .user-info-box .user-info .phone{
+  font-size: 46rpx;
+  color: #fff;
+  font-weight: bold
+}
+.top-bg .user-info-box .user-info .name{
+  font-size: 24rpx;
+  color: #d2ffeb
+}
+.top-bg .user-info-box .user-info .btn{
+  padding: 6rpx 10rpx;
+  background-color: #FFF;
+  color: #0fc57c;
+  font-size: 24rpx;
+  border-radius: 20rpx;
+  width: 100rpx;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.top-bg .more-user-info-box{
+  width: 100%;
+}
+.top-bg .more-user-info-box  .more-user-info{
+  flex: 1;
+}
+.top-bg .more-user-info-box  .more-user-info image{
+  width: 58rpx;
+  height: 46rpx;
+}
+.top-bg .more-user-info-box  .more-user-info .desc{
+  font-size: 24rpx;
+  color: #D2FFEB;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.top-bg .order-box{
+  background-color: #fff;
+  padding: 40rpx;
+  margin-top: 40rpx;
+  border-radius: 15rpx;
+}
+.top-bg .order-box .order-header{
+  width: 100%;
+}
+.top-bg .order-box .order-header .order-tip{
+  font-size: 28rpx;
+  color: #333;
+}
+.top-bg .order-box .order-header .order-more{
+  font-size: 28rpx;
+  color: #969696
+}
+.top-bg .order-box .icon_box{
+  width: 100%;
+}
+.top-bg .order-box .icon_box .icon{
+  flex: 1
+}
+.top-bg .order-box .icon_box .icon image{
+  width: 58rpx;
+  height: 46rpx;
+}
+.top-bg .order-box .icon_box .icon .desc{
+  font-size: 24rpx;
+  color: #787878;
+  text-align: center;
+  padding-top: 10rpx;
+}
+.menu-box{
+  padding: 0 40rpx 40rpx 40rpx;
+}
+.menu-box .bor-rad{
+  border-radius: 15rpx;
+  padding: 20rpx 40rpx;
+}
+.menu-box .meun{
+  padding: 20rpx 0;
+}
+.menu-box .meun .menu-name{
+  font-size: 28rpx;
+  color: #333
+}
+.menu-box .meun .list-box{
+  width: 100%;
+}
+.menu-box .meun .list-box .list{
+  flex: 1;
+}
+.menu-box .meun .list-box .list .img-box image{
+  width: 46rpx;
+  height: 46rpx;
+  display: block
+}
+.menu-box .meun .list-box .list .desc{
+  font-size: 24rpx;
+  color: #787878;
+  text-align: center
+}
+.reddot{
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #f00;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 55%;
+  z-index: 99
+}
+.reddot-1{
+  width: 16rpx;
+  height: 16rpx;
+  background-color: #f00;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 60%;
+  z-index: 99
+}

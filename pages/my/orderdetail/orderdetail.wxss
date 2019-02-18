@@ -1,0 +1,214 @@
+/* pages/my/orderdetail/orderdetail.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/green_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.pt70{
+  padding-top: 70rpx;
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg .pay-status-box{
+  font-size: 46rpx;
+  color: #fff;
+  align-items: center
+}
+.top-bg .pay-status-box image{
+  width: 54rpx;
+  height: 54rpx;
+  display: block
+}
+.top-bg .status-img{
+  width: 240rpx;
+  height: 234rpx;
+  display: block
+}
+.address-box{
+  margin-top: 40rpx;
+  border-radius: 15rpx;
+  padding: 30rpx;
+}
+.address-box .name-box{
+  font-size: 30rpx;
+  color: #141414
+}
+.address-box  .left{
+  width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address-box  .right{
+  flex: 1
+}
+.address-box  .left .tip-box{
+  padding: 5rpx 0;
+  width: 64rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #24C37E;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+}
+.address-box  .right .desc{
+  font-size: 24rpx;
+  color: #b4b4b4;
+}
+.list-box{
+  padding: 20rpx 0 ;
+}
+.list-box .box{
+  margin: 10rpx 0;
+  padding: 20rpx;
+  padding-bottom: 30rpx;
+  border-radius: 10rpx;
+}
+.list-box .box .order-header{
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #e6e6e6;
+}
+.list-box .box .order-header .left{
+  font-size: 26rpx;
+  color: #323232;
+}
+.list-box .box .order-header .right{
+  font-size: 26rpx;
+  color: #EA6841
+}
+.list-box .box .shop-box{
+  padding: 20rpx 0;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6
+}
+.list-box .box .shop-box .left{
+  width: 120rpx;
+  height: 120rpx;
+}
+.list-box .box .shop-box .left image{
+  width: 120rpx;
+  height: 120rpx;
+  display: block
+}
+.list-box .box .shop-box .right{
+  flex: 1;
+  padding-left: 20rpx;
+}
+.list-box .box .shop-box .right .shop-name{
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold;
+}
+.list-box .box .shop-box .right .price-box{
+  padding: 15rpx 0 0 0;
+}
+.list-box .box .shop-box .right .price-box .price{
+  font-size: 24rpx;
+  color: #505050;
+}
+.list-box .box .shop-box .right .price-box .price text{
+  font-size: 36rpx;
+  color: #EB333B
+}
+.list-box .box .shop-box .right .price-box .number{
+  font-size: 24rpx;
+  color: #323232
+}
+.list-box .box .pay-box{
+  padding-top: 30rpx;
+}
+.list-box .box .pay-box .left{
+  font-size: 28rpx;
+  color: #969696
+}
+.list-box .box .pay-box .left text{
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+.list-box .box .pay-box .right{
+  flex: 1;
+  padding-left: 20rpx;
+}
+.list-box .box .pay-box .right .img-box{
+  padding-left: 30rpx;
+}
+.list-box .box .pay-box .right .img-box .img-1{
+  width: 180rpx;
+  height: 60rpx;
+  display: block
+}
+.list-box .box .pay-box .right .img-box .img-2{
+  width: 230rpx;
+  height: 60rpx;
+  display: block
+}
+.list-box .box .pay-box{
+  padding-top: 20rpx;
+}
+.list-box .box .pay-box .left{
+  font-size: 28rpx;
+  color: #969696
+}
+.list-box .box .pay-box .left text{
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+}
+.list-box .box .pay-box .right .btn{
+  padding: 10rpx;
+  border-radius: 8rpx;
+  font-size: 26rpx;
+  border: 1px solid #e6e6e6;
+  color: #323232
+}
+.list-box .box .pay-box .right .btn-color{
+  border: 1px solid #EA6841;
+  color: #EA6841
+}
+.order-detail-box{
+  border-radius: 15rpx;
+  padding: 30rpx;
+}
+.order-detail-box .info-box{
+  padding-bottom: 10rpx;
+}
+.info{
+  font-size: 20rpx;
+  color: #969696;
+  padding-bottom: 10rpx;
+}
+.contact-box{
+  padding: 30rpx 0 0 0;
+}
+.contact-box .box{
+  flex: 1;
+  font-size: 26rpx;
+  color: #646464;
+}
+.contact-box .box image{
+  width: 42rpx;
+  height: 42rpx;
+  display: block;
+}
+.contact-box  .right{
+  border-left: 1px solid #e6e6e6;
+}
+.contact-box .contact-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+}
+.contact-box .contact-btn::after{
+  border: none
+}

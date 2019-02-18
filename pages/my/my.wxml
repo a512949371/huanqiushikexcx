@@ -1,0 +1,87 @@
+<!--pages/my/my.wxml-->
+<view class='page-box'>
+  <view class='top-bg pos'>
+    <view class='user-info-box flex-box'>
+      <view class='header-img-box'>
+      <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class='user-info pl20' wx:if="{{islogin}}">
+        <view class='phone'>{{userdata.userName}}</view>
+        <view class='name'>昵称:<open-data type="userNickName"></open-data></view>
+      </view>
+      <view class='user-info pl20' wx:else>
+        <view class='phone'><open-data type="userNickName"></open-data></view>
+        <view class='btn' bindtap='_gologin'>去登录</view>
+      </view>
+    </view>
+    <view class='more-user-info-box flex-box pt40'>
+      <view class='more-user-info' bindtap='_gomyinfo'>
+        <view class='img-box flex-box-center'>
+          <image src='../../images/icon_my1.png'></image>
+        </view>
+        <view class='desc'>个人资料</view>
+      </view>
+      <view class='more-user-info' bindtap='_gomynew'>
+        <view class='img-box flex-box-center pos'>
+          <image src='../../images/icon_my2.png'></image>
+          <view class='reddot' wx:if="{{userdata.msgNum>0}}"></view>
+        </view>
+        <view class='desc '>消息中心</view>
+      </view>
+      <view class='more-user-info' bindtap='_gomyaddress'>
+        <view class='img-box flex-box-center'>
+          <image src='../../images/icon_my3.png'></image>
+        </view>
+        <view class='desc'>收货地址</view>
+      </view>
+    </view>
+    <view class='order-box'>
+      <view class='order-header flex-box-bwteen'>
+        <view class='order-tip'>我的订单</view>
+        <view class='order-more' bindtap='_goorder' data-type='1'>全部订单></view>
+      </view>
+      <view class='icon_box flex-box pt40' >
+        <view class='icon' bindtap='_goorder' data-type='2'>
+          <view class='img-box flex-box-center pos'>
+            <image src='../../images/icon_my4.png'></image>
+            <view class='reddot-1' wx:if="{{userdata.payNum>0}}"></view>
+          </view>
+          <view class='desc'>待付款</view>
+        </view>
+        <view class='icon' bindtap='_goorder' data-type='3'>
+          <view class='img-box flex-box-center pos'>
+            <image src='../../images/icon_my5.png'></image>
+            <view class='reddot-1' wx:if="{{userdata.sendNum>0}}"></view>
+          </view>
+          <view class='desc'>待发货</view>
+        </view>
+        <view class='icon' bindtap='_goorder' data-type='4'>
+          <view class='img-box flex-box-center pos'>
+            <image src='../../images/icon_my6.png'></image>
+            <view class='reddot-1' wx:if="{{userdata.receiptNum>0}}"></view>
+          </view>
+          <view class='desc'>待收货</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='menu-box'>
+    <view class='bgfff bor-rad'>
+      <block wx:for="{{menudata}}" wx:key="{{index}}">
+        <view class='meun'>
+          <view class='menu-name'>{{item.menuname}}</view>
+          <view class='list-box flex-box pt30'>
+            <block wx:for="{{item.menulist}}" wx:for-item="list" wx:key="{{list.id}}">
+              <view class='list' data-id="{{list.id}}" bindtap='_gobusiness'>
+                <view class='img-box flex-box-center'>
+                  <image src='{{list.imgurl}}'></image>
+                </view>
+                <view class='desc pt20'>{{list.name}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

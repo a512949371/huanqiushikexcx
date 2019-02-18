@@ -1,0 +1,191 @@
+/* pages/orderpay/orderpay.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/geren_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.top-bg{
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+.top-bg .add-box{
+  background-color: #fff;
+  border-radius: 15rpx;
+  padding: 30rpx;
+}
+.top-bg .add-box .add-info{
+  font-size: 30rpx;
+  color: #323232;
+  font-weight: bold
+}
+.top-bg .add-box .add-info .phone image{
+  width: 14rpx;
+  height: 24rpx;
+  display: inline-block;
+  padding-left: 20rpx;
+}
+.top-bg .add-box .add-desc{
+  font-size: 26rpx;
+  color: #b4b4b4;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.top-bg .shop-box{
+  background-color: #fff;
+  padding: 30rpx;
+  margin-top: 40rpx;
+  border-radius: 15rpx;
+}
+.top-bg .shop-box .shop-info{
+  width: 100%;
+  padding-bottom: 30rpx;
+  align-items: center
+}
+.top-bg .shop-box .shop-info .img-box{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 5rpx;
+  overflow: hidden
+}
+.top-bg .shop-box .shop-info .img-box image{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block
+}
+.top-bg .shop-box .shop-info .info-box{
+  padding-left: 20rpx;
+  flex: 1
+}
+.top-bg .shop-box .shop-info .info-box .shop-name{
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold
+}
+.top-bg .shop-box .shop-info .info-box .price-box{
+  width: 100%;
+  align-items: flex-end
+}
+.top-bg .shop-box .shop-info .info-box .price-box .price{
+  font-size: 24rpx;
+  color: #505050;
+}
+.top-bg .shop-box .shop-info .info-box .price-box .price .text{
+  font-size: 36rpx;
+  color: #EB333B;
+  font-weight: bold;
+}
+.top-bg .shop-box .shop-info .info-box .price-box .number{
+  font-size: 24rpx;
+  color: #323232;
+  font-weight: bold
+}
+.top-bg .shop-box .buy-box{
+  padding: 20rpx 0;
+  border-top: 1px solid #e6e6e6;
+}
+.top-bg .shop-box .buy-box .left{
+  font-size: 28rpx;
+  color: #323232;
+  font-weight: bold
+}
+.top-bg .shop-box .buy-box .left text{
+  font-size: 22rpx;
+  color: #FFA81E;
+  padding-left: 30rpx;
+  font-weight: 100
+}
+.top-bg .shop-box .buy-box .right{
+  align-items: center;
+  overflow: hidden;
+  font-weight: bold
+}
+.top-bg .shop-box .buy-box .right image{
+  width: 48rpx;
+  height: 48rpx;
+  display: block
+}
+.top-bg .shop-box .buy-box .right .number{
+  font-size: 28rpx;
+  color: #323232;
+  padding: 0 20rpx;
+}
+.top-bg .shop-box .buy-box .right input{
+  font-size: 28rpx;
+  color: #333;
+  text-align: right;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pay-box{
+  padding: 0 32rpx 0 32rpx;
+}
+.pay-box .pay-tip{
+  font-size: 32rpx;
+  color: #323232;
+  font-weight: bold;
+}
+.pay-box .pay-list{
+  width: 100%
+}
+.pay-box .pay-list .pay{
+  padding: 40rpx 0;
+}
+.pay-box .pay-list .bor-bottom{
+  border-bottom: 1px solid #e6e6e6
+}
+.pay-box .pay-list .pay .left image{
+  width: 48rpx;
+  height: 48rpx;
+  display: inline-block
+}
+.pay-box .pay-list .pay .left .desc{
+  font-size: 28rpx;
+  color: #323232
+}
+.pay-box .pay-list .pay .dot{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50%;
+  border: 2rpx solid #e6e6e6
+}
+.pay-box .pay-list .pay .active{
+  width: 38rpx;
+  height: 38rpx;
+  border-radius: 50%;
+}
+.pay-box .pay-list .pay .right image{
+  width: 38rpx;
+  height: 38rpx;
+  display: inline-block
+}
+.fixed-pay-box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.fixed-pay-box .left{
+  flex: 1;
+  background-color: #414143;
+  font-size: 30rpx;
+  color: #fff;
+  align-items: center;
+  padding: 0 40rpx;
+}
+.fixed-pay-box .btn{
+  width: 268rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  text-align: center;
+  background-color: #24C37E;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: bold
+}

@@ -1,0 +1,46 @@
+/* pages/my/buildaddress/buildaddress.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/geren_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.mt40{
+  margin-top: 40rpx;
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.info-box{
+  border-radius: 15rpx;
+  padding: 40rpx;
+}
+.info-box .info{
+  padding: 15rpx 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.info-box .info .left{
+  font-size: 26rpx;
+  color: #323232
+}
+.info-box .info .right{
+  font-size: 26rpx;
+  color: #323232;
+  flex: 1;
+  text-align: right;
+  outline: none;
+  padding-left: 40rpx;
+}
+.btn-box .btn{
+  width: 95%;
+  padding: 25rpx 0;
+  text-align: center;
+  background-color: #24C37E;
+  font-size: 32rpx;
+  color: #fff;
+  border-radius: 50rpx;
+}

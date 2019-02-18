@@ -1,0 +1,32 @@
+<!--pages/my/createbank/createbank.wxml-->
+<view class='page-box'>
+  <view class='top-nav-box flex-box {{navindex==1?"left":"right"}}'>
+    <view class='top-nav {{navindex==1?"active":""}}' bindtap='_changenav' data-num='1'>银行卡账号</view>
+    <view class='top-nav {{navindex==2?"active":""}}' bindtap='_changenav' data-num='2'>支付宝账号</view>
+  </view>
+  <view class='info-box bgfff' hidden='{{isshow}}'>
+    <view class='info bor-bottom flex-box'>
+      <view class='desc'>银行名称</view>
+      <input class='input' bindinput='_inputdata' data-num='1' placeholder-style='color:#c8c8c8' placeholder='请输入银行名称'></input>
+    </view>
+    <view class='info bor-bottom flex-box mt40'>
+      <view class='desc'>银行卡号</view>
+      <input class='input' bindinput='_inputdata' data-num='2' type='number' placeholder-style='color:#c8c8c8' placeholder='请输入银行卡号'></input>
+    </view>
+    <view class='desc bgfff pt60'>请输入绑定【个人资料里的身份证号】的银行卡</view>
+    <view class='btn-box flex-box-center bgfff'>
+      <view class='btn' data-sign='1' bindtap='_save'>保存</view>
+    </view>
+  </view>
+
+  <view class='info-box bgfff' hidden='{{!isshow}}'>
+    <view class='info bor-bottom flex-box'>
+      <view class='desc'>支付宝账号</view>
+      <input class='input' bindinput='_inputdata' data-num='3' placeholder-style='color:#c8c8c8' placeholder='请输入支付宝账号'></input>
+    </view>
+    <view class='desc bgfff pt60'>请输入绑定【个人资料里的身份证号】的支付宝号</view>
+    <view class='btn-box flex-box-center bgfff'>
+      <view class='btn' data-sign='2' bindtap='_save'>保存</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,53 @@
+/* pages/my/banklist/banklist.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f0f0f0;
+}
+.bgfff{
+  background-color: #fff
+}
+.page-box{
+  padding: 40rpx;
+  padding-bottom: 140rpx;
+  box-sizing: border-box;
+}
+.bank-box{
+  padding: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 20rpx;
+}
+.bank-box .bank-name{
+  font-size: 32rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.bank-box .bank-number{
+  font-size: 24rpx;
+  color: #b4b4b4;
+  padding: 10rpx 0;
+}
+.btn-box .btn{
+  padding: 10rpx 25rpx;
+  border: 1px solid #e6e6e6;
+  font-size: 24rpx;
+  color: #323232;
+  border-radius: 10rpx;
+}
+.fixed-btn-box{
+  position: fixed;
+  left:0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 40rpx;
+  z-index: 99
+}
+.fixed-btn-box .btn{
+  width: 80%;
+  padding: 25rpx 0;
+  text-align: center;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  color: #fff;
+  background-color: #24C37E
+}

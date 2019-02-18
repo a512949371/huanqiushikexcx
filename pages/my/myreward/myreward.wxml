@@ -1,0 +1,60 @@
+<!--pages/my/myreward/myreward.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='money-box '>{{shopdata.allBonus}}</view>
+    <view class='tip-box'>出局可提现金额</view>
+    <view class='number-box bgfff flex-box'>
+      <view class='number'>
+        <view class='num'>{{shopdata.shareBonus}}</view>
+        <view class='desc pt20'>分享奖</view>
+      </view>
+      <view class='number'>
+        <view class='num'>{{shopdata.publicAward}}</view>
+        <view class='desc pt20'>公排奖</view>
+      </view>
+      <view class='number'>
+        <view class='num'>{{shopdata.compassionateAward}}</view>
+        <view class='desc pt20'>体恤奖</view>
+      </view>
+    </view>
+  </view>
+  <view class='nav-list-box flex-box bor-bottom bgfff'>
+   <view class='nav' bindtap='_changenav' data-type='1'><text class='text {{navindex==1?"active":""}}'>分享奖</text></view>
+   <view class='nav' bindtap='_changenav' data-type='2'><text class='text {{navindex==2?"active":""}}'>公排奖</text></view>
+   <view class='nav' bindtap='_changenav' data-type='3'><text class='text {{navindex==3?"active":""}}'>体恤奖</text></view>
+  </view>
+  <view class='data-list-box bgfff'>
+  <block wx:if="{{navindex==1}}" wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='data-box'>
+      <view class='data-header flex-box-bwteen'>
+        <view class='left'>{{item.title}}</view>
+        <view class='right'><text>￥{{item.commission}}</text>/{{item.shareNumber}}</view>
+      </view>
+      <view class='desc'>分享会员：{{item.phone}}</view>
+      <view class='desc'>到账时间：{{item.createTime}}</view>
+      <view class='desc'>购买单数：{{item.number}}</view>
+      <view class='desc'>烧伤指数：{{item.fireBurn}}<text class='tip'>（说明：VIP{{item.downLevel}}减去VIP{{item.upLevel}}）</text></view>
+    </view>
+    </block>
+    <block wx:if="{{navindex==2}}" wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='data-box'>
+      <view class='data-header flex-box-bwteen'>
+        <view class='left'>{{item.title}}</view>
+        <view class='right'><text>￥{{item.price}}</text></view>
+      </view>
+      <view class='desc'>出局账号：{{item.accountNo}}<text class='add'>{{item.groupName}}团</text></view>
+      <view class='desc'>到账时间：{{item.createTime}}</view>
+    </view>
+    </block>
+    <block wx:if="{{navindex==3}}" wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='data-box'>
+      <view class='data-header flex-box-bwteen'>
+        <view class='left'>{{item.title}}</view>
+        <view class='right'><text>￥{{item.price}}</text></view>
+      </view>
+      <view class='desc'>出局账号：{{item.accountNo}}<text class='add'>{{item.groupName}}团</text></view>
+      <view class='desc'>到账时间：{{item.createTime}}</view>
+    </view>
+    </block>
+  </view>
+</view>

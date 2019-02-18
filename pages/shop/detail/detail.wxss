@@ -1,0 +1,139 @@
+/* pages/shop/detail/detail.wxss */
+@import '/app.wxss';
+.top-img{
+  width: 750rpx;
+  height: 468rpx;
+  display: inline-block
+}
+.shop-detail-box{
+  padding: 20rpx;
+}
+.shop-price-box{
+  font-size: 32rpx;
+  color: #ababab;
+  align-items: flex-end;
+  overflow: hidden
+}
+.shop-price-box .price{
+  font-size: 54rpx;
+  line-height: 50rpx;
+  color: #EB333B;
+  font-weight: bold
+}
+.shop-detail-box .shop-name{
+  font-size: 32rpx;
+  color: #252525;
+  padding: 20rpx 0;
+  font-weight: bold;
+}
+.shop-detail-box .shop-desc{
+  font-size: 24rpx;
+  color: #969696;
+
+}
+.shop-detail-box .shop-share{
+  align-items: center
+}
+.shop-detail-box .shop-share image{
+  width: 710rpx;
+  height: 170rpx;
+  display: inline-block;
+}
+.shop-detail-box .shop-share .scroll-share{
+  position: absolute;
+  top:64rpx;
+  left: 30%;
+  right: 20%;
+  z-index: 99
+}
+.shop-detail-box .shop-share .scroll-share .share-txt{
+  font-size: 38rpx;
+  color: #4B7F6D;
+  font-weight: bold
+}
+.shop-detail-box .shop-share .scroll-share .share-swiper .txt{
+ font-size: 22rpx;
+ color: #4B7F6D;
+}
+.shop-detail-box .shop-share .share-btn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+  outline: none
+}
+.shop-detail-box .shop-share .share-btn::after{
+  border: none;
+}
+.web-detail{
+  border-top: 20rpx solid #f0f0f0;
+}
+.web-detail .web-tit{
+  font-size: 30rpx;
+  color: #141414;
+  font-weight: bold;
+  padding: 20rpx 30rpx;
+  line-height: 30rpx;
+  margin-top: 30rpx;
+}
+.web-detail .web-tit .line{
+  width: 2rpx;
+  background-color: #24C37E
+}
+.p30{
+  padding: 0 30rpx
+}
+.fixed-box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}
+.fixed-box .box{
+  flex: 1;
+  border-top: 1px solid #e5e5e5
+}
+.fixed-box .left{
+  padding: 0 40rpx;
+  padding-top: 10rpx;
+}
+.fixed-box .icon-box{
+  flex: 1;
+  align-items: center;
+  text-align: center;
+  font-size: 20rpx;
+  color: #646464;
+  padding: 10rpx 0;
+}
+.fixed-box .icon-box image{
+  width: 42rpx;
+  height: 38rpx;
+  display: inline-block
+}
+.fixed-box .right{
+  text-align: center;
+  background-color: #24C37E;
+  font-size: 30rpx;
+  color: #fff;
+}
+.fixed-box .right .price{
+  flex: 1;
+  padding: 20rpx 0;
+  font-weight: bold
+}
+.kefu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:transparent;
+  border: none
+}
+.kefu::after{
+  border: none
+}

@@ -1,0 +1,59 @@
+<!--pages/login/login.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='flex-box-center'>
+      <view class='logo-box'>
+       <image src='/images/logo.png'></image>
+      </view>
+    </view>
+    <view class='main'>
+      <form bindsubmit='_login'>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login1.png'></image>
+        <view class='bor-box'>
+          <input class='data' type='number' name="phone" placeholder-style="color:#ccc" placeholder='请输入手机号' data-inputid='1' value='{{submitdata.phone}}' bindinput='_inputphone'></input>
+        </view>
+      </view>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login2.png'></image>
+        <view class='bor-box flex-box'>
+          <input class='data' type='number' name="sms" placeholder-style="color:#ccc" placeholder='短信验证码' data-inputid='2' value='{{submitdata.sms}}'></input>
+          <view class='sms-box' bindtap='_sendsms'>{{smstip}}</view>
+        </view>
+      </view>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login3.png'></image>
+        <view class='bor-box flex-box'>
+          <input class='data' type='number' name="recommendphone" placeholder-style="color:#ccc" placeholder='推荐人电话' data-inputid='3' value='{{submitdata.recommendphone}}'></input>
+          <view class='desc-box'>
+            <text class='text'>*</text>
+            可修改推荐人
+            <text class='text'>*</text>
+          </view>
+        </view>
+      </view>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login4.png'></image>
+        <view class='bor-box flex-box'>
+          <input class='data' password="{{true}}" name="pwd" placeholder-style="color:#ccc" placeholder='请输入密码,6-20位数字与字母组合' data-inputid='4' value='{{submitdata.pwd}}'></input>
+        </view>
+      </view>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login4.png'></image>
+        <view class='bor-box flex-box'>
+          <input class='data' password="{{true}}" name="repeatpwd" placeholder-style="color:#ccc" placeholder='请再次输入密码,6-20位数字与字母组合' data-inputid='5' value='{{submitdata.repeatpwd}}'></input>
+        </view>
+      </view>
+      <view class='rule-box flex-box-center pt40'>
+       <image src='{{isrule?"/images/icon_login5-1.png":"/images/icon_login5.png"}}' class='rule-img' bindtap='_checkrule'></image>
+       <view class='rule-desc'>已阅读并同意<text>《用户服务协议》</text></view>
+      </view>
+      <view class='subm-btn-box flex-box-center pt20'>
+       <button class='subm-btn' form-type="submit" wx:if="{{isauthorization}}" >登录</button>
+       <button class='subm-btn' open-type="getUserInfo" bindgetuserinfo='bindGetUserInfo' wx:else>登录授权</button>
+      </view>
+      <view class='tip-box pt20' >登录密码与支付密码一致</view>
+      </form>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,92 @@
+<!--pages/orderpay/orderpay.wxml-->
+<view class='page-box'>
+  <view class='top-bg pos'>
+    <view class='add-box' wx:if="{{shopdetail.hasAddress }}" bindtap='_goaddress'>
+      <view class='add-info flex-box-bwteen'>
+        <view class='name'>姓名：{{address.realName}}</view>
+        <view class='phone flex-box-center'>
+          <view class=''>{{address.phone}}</view>
+          <image src='../../images/icon_left.png'></image>
+        </view>
+      </view>
+      <view class='add-desc pt10'>{{address.address}}</view>
+    </view>
+    <view class='add-box' wx:else bindtap='_goaddress'>
+      <view class='add-info flex-box-bwteen'>
+          <view class='name'>去选择地址</view>
+          <view class='phone flex-box-center'>
+            <image src='../../images/icon_left.png'></image>
+          </view>
+        </view>
+    </view>
+    <view class='shop-box'>
+      <view class='shop-info flex-box'>
+        <view class='img-box'><image src='{{shopdetail.imgUrl}}'></image></view>
+        <view class='info-box'>
+         <view class='shop-name'>{{shopdetail.title}}</view>
+         <view class='price-box flex-box-bwteen pt20'>
+           <view class='price'><text class='text'>￥{{shopdetail.price}}</text></view>
+           <view class='number'>X1</view>
+         </view>
+        </view>
+      </view>
+      <view class='buy-box'>
+       <view class='flex-box-bwteen'>
+        <view class='left'>购买数<text>当前最多可购买{{shopdetail.productNum}}单</text></view>
+        <view class='right flex-box-center'>
+         <view class='reduce' bindtap='_reduce'><image src='../../images/icon_reduce.png'></image></view>
+         <view class='number'>{{buynum}}</view>
+         <view class='add' bindtap='_addnum'><image src='../../images/icon_add.png'></image></view>
+        </view>
+       </view>
+      </view>
+      <view class='buy-box'>
+       <view class='flex-box-bwteen'>
+        <view class='left'>
+        备注
+        </view>
+        <view class='right' style='flex:1;padding-left:100rpx;'>
+         <input style='font-weight: 100' placeholder-style='color:#c8c8c8' placeholder='请输入备注（300字内）' bindblur='_inputdata' maxlength='300'></input>
+        </view>
+       </view>
+      </view>
+    </view>
+  </view>
+  <view class='pay-box'>
+   <view class='bgfff pd30' style='padding-bottom:0;border-radius: 10rpx;'>
+    <view class='pay-tip'>选择支付方式</view>
+    <view class='pay-list'>
+      <view class='pay flex-box-bwteen' wx:if="{{shopdetail.wxPay}}">
+       <view class='left flex-box'>
+        <image src='/images/icon_wx.png'></image>
+        <view class='desc pl20'>微信支付</view>
+       </view>
+       <view class='right' bindtap='_changepay' data-num='1'>
+        <view class='{{ischeck==1?"active":"dot"}}'>
+         <image wx:if="{{ischeck==1}}" src='/images/icon_success.png'></image>
+        </view>
+       </view>
+      </view>
+      <view class='pay flex-box-bwteen' style='border-top: 1px solid #e5e5e5'>
+       <view class='left flex-box'>
+        <image src='/images/icon_integral.png'></image>
+        <view class='desc pl20'>积分余额支付</view>
+       </view>
+       <view class='right' bindtap='_changepay' data-num='2'>
+        <view class='{{ischeck==2?"active":"dot"}}'>
+        <image wx:if="{{ischeck==2}}" src='/images/icon_success.png'></image>
+        </view>
+       </view>
+      </view>
+    </view>
+   </view>
+  </view>
+</view>
+<view class='fixed-pay-box flex-box'>
+ <view class='left flex-box'>
+  <text>共{{buynum}}件</text>
+  <text class='pl40'>合计:￥{{toprice}}</text>
+ </view>
+ <view class='btn' bindtap='_save' data-id='{{shopdetail.id}}'>立即支付</view>
+</view>
+<Password isshow="{{isshowpwdbox}}" bind:closepwd="closepwd" pwd="{{pwd}}" smsinputfous="{{smsinputfous}}"></Password>

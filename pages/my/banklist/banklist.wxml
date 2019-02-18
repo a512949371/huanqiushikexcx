@@ -1,0 +1,19 @@
+<!--pages/my/banklist/banklist.wxml-->
+<view class='page-box'>
+ <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+  <view class='bank-box bgfff'>
+   <view bindtap='changeadd' data-num='{{index}}'>
+   <view class='bank-name'>{{item.bankName}}</view>
+   <view class='bank-number'wx:if="{{item.sign==1}}">{{item.bankNo}}</view>
+   <view class='bank-number'wx:else>尾号：{{item.bankNo}}</view>
+   </view>
+   <view class='btn-box flex-box-end'>
+     <view class='btn' bindtap='_editbank' data-id='{{item.id}}' data-sign='{{item.sign}}'>编辑</view>
+     <view class='btn ml20' bindtap='_deletebank' data-id='{{item.id}}'>删除</view>
+   </view>
+  </view>
+  </block>
+  <view class='fixed-btn-box flex-box-center'>
+   <view class='btn' bindtap='_createbank' >添加提现账号</view>
+  </view>
+</view>

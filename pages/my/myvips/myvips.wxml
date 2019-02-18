@@ -1,0 +1,16 @@
+<!--pages/my/myvips/myvips.wxml-->
+<view class='page-box'>
+ <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+  <view class='vip-box bgfff flex-box pos'>
+   <view class='left'><image src='{{item.headImg}}'></image></view>
+   <view class='right'>
+     <view class='name-box flex-box'>
+       <view>{{item.name}}</view>
+       <view class='vip'>vip.{{item.level}}</view>
+     </view>
+     <view class='phone pt20'>账号:{{item.userName}}</view>
+   </view>
+   <view class='no-use' wx:if="{{item.type==0}}">未激活</view>
+  </view>
+  </block>
+</view>

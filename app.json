@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/world/world",
+    "pages/shop/shop",
+    "pages/my/my",
+    "pages/befindex/befindex",
+    "pages/editpwd/editpwd",
+    "pages/my/transferaccountslist/transferaccountslist",
+    "pages/my/transferaccounts/transferaccounts",
+    "pages/my/takeawaymoneylist/takeawaymoneylist",
+    "pages/my/banklist/banklist",
+    "pages/my/createbank/createbank",
+    "pages/my/editbank/editbank",
+    "pages/my/takeoutmoney/takeoutmoney",
+    "pages/my/myorder/myorder",    
+    "pages/my/myfinance/myfinance",
+    "pages/my/myreward/myreward",
+    "pages/my/orderdetail/orderdetail",
+    "pages/my/myaddress/myaddress",
+    "pages/my/editaddress/editaddress",
+    "pages/my/buildaddress/buildaddress",
+    "pages/outoffice/outoffice",
+    "pages/my/messagecenter/messagecenter",
+    "pages/my/myinfo/myinfo",
+    "pages/my/myvips/myvips",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/shop/oneshoplist/oneshoplist",
+    "pages/shop/detail/detail",
+    "pages/world/share/share",
+    "pages/orderpay/orderpay",
+    "pages/logs/logs",
+    "pages/my/help/help",
+    "pages/index/newdetail/newdetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#24C37E",
+    "navigationBarTitleText": "环球时刻",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon_index-1.png",
+        "selectedIconPath": "/images/icon_index.png"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城",
+        "iconPath": "/images/icon_shop-1.png",
+        "selectedIconPath": "/images/icon_shop.png"
+      },
+      {
+        "pagePath": "pages/world/world",
+        "text": "环球时刻",
+        "iconPath": "/images/icon_ball-1.png",
+        "selectedIconPath": "/images/icon_ball.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "/images/icon_user-1.png",
+        "selectedIconPath": "/images/icon_user.png"
+      }
+    ],
+    "color": "#646464",
+    "selectedColor": "#24C37E"
+  }
+}

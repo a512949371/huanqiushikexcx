@@ -1,0 +1,55 @@
+<!--pages/shop/detail/detail.wxml-->
+<import src="../../../wxParse/wxParse.wxml" />
+<view class='page-box'>
+  <view>
+    <image src='{{shopdata.imgUrl}}' class='top-img'></image>
+  </view>
+  <view class='shop-detail-box'>
+    <view class='shop-price-box flex-box'>
+      <text class='price'>￥{{shopdata.price}}</text><text>/{{shopdata.guige}}</text>
+    </view>
+    <view class='shop-name'>{{shopdata.title}}</view>
+    <view class='shop-desc'>{{shopdata.content}}</view>
+    <view class='shop-share flex-box pt30 pos' wx:if="{{shopdata.model}}">
+     <image src='/images/share.gif'></image>
+     <view class='scroll-share'>
+      <view class='share-txt'>分享即获得{{shopdata.sharePrice }}元</view>
+      <view class='share-swiper pt10'>
+       <swiper circular="{{true}}"  duration="{{duration}}" vertical="{{true}}"  autoplay='{{true}}' style='height:50rpx;'>
+        <block wx:for="{{scrolldata}}" wx:key="{{index}}">
+         <swiper-item >
+          <view class="txt">{{item}}</view>
+         </swiper-item>
+        </block>
+       </swiper>
+      </view>
+     </view>
+     <button open-type='share' class='share-btn' wx:if="{{isauthorization}}"></button>
+     <button  class='share-btn' bindtap='_gobefindex' wx:else data-id='{{shopdata.id}}'></button>
+    </view>
+  </view>
+  <view class='web-detail'>
+   <view class='web-tit flex-box'><view class='line'></view><text class='pl20'>商品详情</text></view>
+   <view class='p30'>
+    <template is="wxParse" data="{{wxParseData:desc.nodes}}" />
+   </view>
+  </view>
+</view>
+<view class='fixed-box flex-box'>
+ <view class='left box flex-box'>
+   <view class='icon-box' bindtap='_gohome'>
+    <image src='/images/icon_home.png'></image>
+    <view>首页</view>
+   </view>
+   <view class='icon-box pos'>
+    <image src='/images/icon_kf.png'></image>
+    <view>客服</view>
+    <button open-type="contact" class='kefu'></button>
+   </view>
+ </view>
+ <view class='right box flex-box-center' bindtap='_save' data-id='{{shopdata.id}}'>
+  <view class='price'>￥{{shopdata.price}}</view>
+  <view class='price'>一键抢</view>
+ </view>
+</view>
+

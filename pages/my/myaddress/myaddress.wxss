@@ -1,0 +1,80 @@
+/* pages/my/myaddress/myaddress.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f0f0f0;
+}
+.bgfff{
+  background-color: #fff;
+}
+.add-box{
+  padding: 0 30rpx;
+}
+.add-box .add{
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 40rpx 0;
+}
+.add-box .add .left{
+  flex: 1;
+  font-size: 28rpx;
+  color: #646464;
+  align-items: center
+}
+.add-box .add .left image{
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+}
+.add-box .add .right{
+  width: 14rpx;
+  height: 21rpx;
+  display: block
+}
+.add-bottom{
+  width: 750rpx;
+  height: 6rpx;
+  display: block
+}
+.address-list-box{
+  padding: 0 30rpx;
+}
+.address-list-box .address-box{
+  margin-top: 40rpx;
+  border-radius: 15rpx;
+  padding: 30rpx;
+}
+.address-list-box .address-box .name-box{
+  font-size: 30rpx;
+  color: #141414
+}
+.address-list-box .address-box  .left{
+  width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.address-list-box .address-box  .right{
+  flex: 1
+}
+.address-list-box .address-box  .left .tip-box{
+  padding: 5rpx 0;
+  width: 64rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #24C37E;
+  border-radius: 5rpx;
+  font-size: 24rpx;
+}
+.address-list-box .address-box  .right .desc{
+  font-size: 24rpx;
+  color: #b4b4b4;
+}
+.address-list-box .address-box .btn-box .btn{
+  padding: 10rpx 20rpx;
+  text-align: center;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  color: #323232;
+  border: 1px solid #e6e6e6
+}

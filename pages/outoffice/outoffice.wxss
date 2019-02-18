@@ -1,0 +1,99 @@
+/* pages/outoffice/outoffice.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/geren_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg .money-box{
+  font-size: 82rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 82rpx;
+}
+.top-bg .money-box .add-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  overflow: hidden
+}
+.top-bg .tip-box{
+  font-size: 24rpx;
+  color: #B9FFE0;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.top-bg .out-btn{
+  width: 100%;
+}
+.top-bg .out-btn .btn{
+  width: 40%;
+  padding: 20rpx 0;
+  color: #24C37E;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.top-bg .number-box{
+  border-radius: 15rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+.top-bg .number-box .number{
+  flex: 1;
+  text-align: center;
+}
+.top-bg .number-box .number .num{
+  font-size: 36rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.top-bg .number-box .number .desc{
+  font-size: 24rpx;
+  color: #969696;
+}
+.more-box{
+  border-radius: 15rpx;
+  margin-top: 20rpx;
+}
+.more-box .more-desc{
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1px solid #e6e6e6
+}
+.more-box .list-box{
+  padding: 0 30rpx;
+}
+.more-box .list-box .box{
+  padding: 30rpx 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.more-box .list-box .box .data-top{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.more-box .list-box .box .desc-box{
+  padding-top: 15rpx;
+}
+.more-box .list-box .box .desc-box .left{
+  font-size: 26rpx;
+  color: #969696;
+}
+.more-box .list-box .box .desc-box .red{
+  color: #FFC477
+}
+.more-box .list-box .box .desc-box .right{
+  font-size: 26rpx;
+  color: #EA6841;
+}

@@ -1,0 +1,99 @@
+<!--pages/my/orderdetail/orderdetail.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='pay-status-box flex-box'>
+      <image src='/images/icon_timeq.png'></image>
+      <view class='pl20'>{{imgdata[orderstatus-1].desc}}</view>
+    </view>
+    <view class='flex-box-center pt20'>
+      <image src='{{imgdata[orderstatus-1].img}}' class='status-img'></image>
+    </view>
+    <view class='address-box bgfff'>
+      <view class='name-box flex-box'>
+        <view class='left'>{{detail.addressee}}</view>
+        <view class='right'>{{detail.phone}}</view>
+      </view>
+      <view class='add-desc-box pt20 flex-box'>
+        <view class='left'>
+        </view>
+        <view class='right'>
+          <view class='desc'>{{detail.address}}</view>
+        </view>
+      </view>
+    </view>
+    <view class='list-box'>
+      <view class='box bgfff'>
+      <block wx:for="{{detail.goodsList}}">
+        <view class='shop-box flex-box'>
+          <view class='left'>
+            <image src='{{item.picUrl}}'></image>
+          </view>
+          <view class='right'>
+            <view class='shop-name'>{{item.goodsName}}</view>
+            <view class='price-box flex-box-bwteen'>
+              <view class='price'>
+                <text>￥{{item.price}}</text>/{{item.guiGe}}</view>
+              <view class='number'>X{{item.number}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+        <view class='pay-box flex-box-bwteen' wx:if="{{detail.handleOption.pay}}">
+          <view class='left'>选择支付：</view>
+          <view class='right flex-box'>
+           <block wx:for="{{detail.payWays}}">
+            <view class='img-box' wx:if="{{item.payWay=='wx'}}" bindtap='_wxpay'>
+              <image class='img-1' src='/images/icon_weixinpay.png'></image>
+            </view>
+            <view class='img-box' wx:else bindtap='_payjf' data-id='{{detail.id}}'>
+              <image class='img-2' src='/images/icon_integralpay.png'></image>
+            </view>
+            </block>
+          </view>
+        </view>
+        <view class='pay-box flex-box-bwteen' wx:if="{{orderstatus==2}}">
+          <view class='left'></view>
+          <view class='right flex-box-end'>
+            <view class='btn' bindtap='_calldelivergood'>催单发货</view>
+          </view>
+        </view>
+        <view class='pay-box flex-box-bwteen' wx:if="{{orderstatus==3}}">
+          <view class='left'></view>
+          <view class='right flex-box-end'>
+            <view class='btn'>查看物流</view>
+            <view class='btn ml20'>确认收货</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='order-detail-box bgfff'>
+      <view class='bor-bottom info-box' wx:if="{{orderstatus==1}}">
+        <view class='info'>支付方式：{{detail.payWay}}</view>
+        <view class='info'>下单时间：{{detail.createTime}}</view>
+      </view>
+      <view class='bor-bottom info-box' wx:if="{{orderstatus==2}}">
+        <view class='info'>支付方式：{{detail.payWay}}</view>
+        <view class='info'>订单编号：{{detail.orderSn}}</view>
+        <view class='info'>下单时间：{{detail.createTime}}</view>
+      </view>
+      <view class='bor-bottom info-box' wx:if="{{orderstatus==3}}">
+        <view class='info'>支付方式：{{detail.payWay}}</view>
+        <view class='info'>物流单号：{{detail.courierNum}}</view>
+        <view class='info'>订单编号：{{detail.orderSn}}</view>
+        <view class='info'>下单时间：{{detail.createTime}}</view>
+      </view>
+      <view class='contact-box flex-box'>
+        <view class='left box flex-box-center pos'>
+          <image src='/images/icon_message.png'></image>
+          <view class='pl20'>联系卖家</view>
+          <button open-type='contact' class='contact-btn'></button>
+        </view>
+        <view class='right box flex-box-center'>
+          <image src='/images/icon_phone.png'></image>
+          <view class='pl20'>拨打电话</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<Password isshow="{{isshowpwdbox}}" bind:closepwd="closepwd" pwd="{{pwd}}" smsinputfous="{{smsinputfous}}"></Password>

@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='flex-box-center'>
+      <view class='logo-box'>
+       <image src='/images/logo.png'></image>
+      </view>
+    </view>
+    <view class='main'>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login1.png'></image>
+        <view class='bor-box'>
+          <input class='data' type='number' name="phone" placeholder-style="color:#ccc" placeholder='请输入手机号' data-inputid='1'  bindinput='_inputphone'></input>
+        </view>
+      </view>
+      <view class='data-box mt60 flex-box'>
+        <image class='data-img' src='/images/icon_login2.png'></image>
+        <view class='bor-box flex-box'>
+          <input class='data' type='number' name="sms" placeholder-style="color:#ccc" placeholder='短信验证码' data-inputid='2' bindinput='_inputphone'></input>
+          <view class='sms-box' bindtap='_sendsms'>{{smstip}}</view>
+        </view>
+      </view>
+      <view class='subm-btn-box flex-box-center pt40 mt40'>
+       <view class='subm-btn' bindtap='_login'>登录</view>
+      </view>
+      <view class='tip-box pt20' bindtap='_goregsiter'>注册新用户</view>
+    </view>
+  </view>
+</view>

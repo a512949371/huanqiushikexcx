@@ -1,0 +1,35 @@
+<!--pages/world/share/share.wxml-->
+<view class='share-box'>
+  <view class='shaw'></view>
+  <view class='share' style='top:{{canvasbox.top}};bottom:{{canvasbox.bottom}}'>
+    <view class='close-btn'>
+      <image src='/images/icon_close.png'></image>
+    </view>
+    <view class='canvas-box' style='width:{{usewidth+"px"}};height:{{useheight+"px"}}'>
+      <canvas canvas-id='Share' style="width: 100%;height: 100%;z-index:100"></canvas>
+    </view>
+    <view class='btn-box'>
+      <view class='flex-box-center'>
+        <block wx:for="{{sharemode}}" wx:key="{{item.sharetype}}">
+          <view class='btn' bindtap='saveImg'>
+            <view class='flex-box-center'>
+              <image src='{{item.shareicon}}'></image>
+            </view>
+            <view class='pt20'>{{item.sharedesc}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='open-seting-bg' wx:if='{{openSet}}' catchtap='cancleSet'>
+  <view class='open-set-inner'>
+    <view class='set-title'>是否打开授权设置？</view>
+    <view class='btn-openset'>
+      <view catchtap='cancleSet'>取消</view>
+          <view>
+              <button open-type='openSetting' class='button-style' catchtap='cancleSet'>确定</button>
+          </view>
+    </view>
+  </view>
+</view>

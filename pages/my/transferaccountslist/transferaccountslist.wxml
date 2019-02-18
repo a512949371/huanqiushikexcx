@@ -1,0 +1,30 @@
+<!--pages/my/transferaccountslist/transferaccountslist.wxml-->
+<view class='page-box'>
+  <view class='top-nav-box flex-box bgfff'>
+    <view class='top-nav' bindtap='_changenav' data-num='2'>
+      <text class='text {{navindex==2?"active":""}}'>转入明细</text>
+    </view>
+    <view class='top-nav' bindtap='_changenav' data-num='1'>
+      <text class='text {{navindex==1?"active":""}}'>转出明细</text>
+    </view>
+  </view>
+  <view class='list-box'>
+  <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='pt30'>
+      <view class='data-box flex-box bgfff'>
+        <view class='left flex-box'>
+          <view class='img'>
+            <image src='{{item.headImg}}'></image>
+          </view>
+          <view class='info-box'>
+            <view class='order-number'>{{navindex==2?item.phoneIn:item.phoneTo}}</view>
+            <view class='pt20 desc'>昵称：{{item.name}}</view>
+            <view class='time'>{{item.createTime}}</view>
+          </view>
+        </view>
+        <view class='right'>{{item.price}}</view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

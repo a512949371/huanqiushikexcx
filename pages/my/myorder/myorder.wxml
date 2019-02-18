@@ -1,0 +1,51 @@
+<!--pages/my/myorder/myorder.wxml-->
+<view class='page-box'>
+  <view class='top-nav-box bgfff flex-box'>
+    <view class='nav' bindtap='_changenav' data-type='1'>
+      <text class='text {{navindex==1?"active":""}}'>全部</text>
+    </view>
+    <view class='nav' bindtap='_changenav' data-type='2'>
+      <text class='text {{navindex==2?"active":""}}'>待付款</text>
+    </view>
+    <view class='nav' bindtap='_changenav' data-type='3'>
+      <text class='text {{navindex==3?"active":""}}'>待发货</text>
+    </view>
+    <view class='nav' bindtap='_changenav' data-type='4'>
+      <text class='text {{navindex==4?"active":""}}'>待收货</text>
+    </view>
+  </view>
+  <view class='list-box'>
+   <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='box bgfff'>
+      <view class='order-header flex-box-bwteen'>
+        <view class='left'>订单编号：{{item.orderSn}}</view>
+        <view class='right'>{{item.orderStatusText}}</view>
+      </view>
+      <block wx:for="{{item.goodsList}}" wx:for-item="shoplist">
+      <view class='shop-box flex-box' bindtap='_godetail' data-id='{{item.id}}'>
+        <view class='left'>
+          <image src='{{shoplist.picUrl}}'></image>
+        </view>
+        <view class='right'>
+          <view class='shop-name'>{{shoplist.goodsName}}</view>
+          <view class='price-box flex-box-bwteen'>
+            <view class='price'>
+              <text>￥{{shoplist.price}}</text>/2盒</view>
+            <view class='number'>X{{shoplist.number}}</view>
+          </view>
+        </view>
+      </view>
+      </block>
+      <view class='pay-box flex-box-bwteen'>
+       <view class='left'>应付金额：<text>￥{{item.totalPrice}}</text></view>
+       <view class='right flex-box'>
+        <view class='btn' wx:if="{{item.handleOption.cancel}}" bindtap='_cancalorder' data-id='{{item.id}}'>取消订单</view>
+        <view class='btn' wx:if="{{item.handleOption.reminder}}" bindtap='_calldelivergood'>催单发货</view>
+        <view class='btn' wx:if="{{item.handleOption.confirm}}" data-id='{{item.id}}' bindtap='_trueorder'>确认收货</view>
+        <view class='btn btn-color ml20' bindtap='_godetail'  wx:if="{{item.handleOption.pay}}" data-id='{{item.id}}'>去支付</view>
+       </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

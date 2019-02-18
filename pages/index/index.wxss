@@ -1,0 +1,116 @@
+/**index.wxss**/
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f2f2f2;
+}
+.top-banner {
+  width: 750rpx;
+    height: 375rpx;
+    flex-direction: column;
+    position: relative;
+}
+.boradus{
+  border-radius: 10rpx;
+}
+.banner-scroll {
+    width: 750rpx;
+    height: 375rpx;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-scroll .slide-image {
+  width: 750rpx;
+  height: 375rpx;
+}
+.dotstyle{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 25rpx;
+}
+.dotstyle .dot{
+  width: 14rpx;
+  height: 8rpx;
+  margin-left: 10rpx;
+  background-color: #999;
+  border-radius: 8rpx;
+}
+.dotstyle .dot.active{
+  width: 28rpx;
+  height: 8rpx;
+  background-color: #000;
+  margin-left: 10rpx;
+  border-radius: 8rpx;
+}
+.hotnews-box{
+  padding: 20rpx 26rpx;
+  background-color: #fff;
+}
+.hotnews-box .hotnews-tip{
+  width: 55rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #131313;
+  padding-right: 20rpx;
+  border-right: 1px solid #e1e1e1;
+  font-weight: bold
+}
+.hotnews-box .hotnews-tip image{
+  width: 53rpx;
+  height: 25rpx;
+  display: inline-block
+}
+.hotnews-box .hotnews{
+  font-size: 24rpx;
+  color: #555;
+  padding-left: 20rpx;
+}
+.hotnews-box .notice-btn{
+  font-size: 24rpx;
+  color: #2AA2F7;
+  text-decoration: underline;
+  padding-left: 20rpx;
+}
+.shop-box{
+  padding:0 26rpx;
+  background-color: #f2f2f2;
+}
+.shop-box .shop{
+  background-color: #fff
+}
+.shop-box .shop image{
+  width: 698rpx;
+  height: 432rpx;
+  display: block
+}
+.shop-detail{
+  padding: 30rpx;
+}
+.shop-detail .shop-name{
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #141414;
+  font-weight: bold
+}
+.shop-detail .shop-price{
+  font-size: 24rpx;
+  color: #ababab
+}
+.shop-detail .shop-price .text{
+  font-size: 30rpx;
+  color: #EB333B;
+  font-weight: bold
+}
+.shop-detail .shop-desc{
+  font-size: 24rpx;
+  color: #b4b4b4;
+  padding: 10rpx 0 0 0;
+}

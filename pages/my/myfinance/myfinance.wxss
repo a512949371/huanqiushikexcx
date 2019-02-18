@@ -1,0 +1,117 @@
+/* pages/my/myfinance/myfinance.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/jiangjinmingxi_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.bor-left{
+  border-left: 1px solid #e6e6e6
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg .money-box{
+  font-size: 82rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 82rpx;
+}
+.top-bg .money-box .add-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+.top-bg .tip-box{
+  font-size: 24rpx;
+  color: #B9FFE0;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.top-bg .out-btn{
+  width: 100%;
+}
+.top-bg .out-btn .btn{
+  width: 40%;
+  padding: 20rpx 0;
+  color: #24C37E;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.top-bg .number-box{
+  border-radius: 15rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+.top-bg .number-box .number{
+  flex: 1;
+  text-align: center;
+}
+.top-bg .number-box .number .num{
+  font-size: 36rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.top-bg .number-box .number .desc{
+  font-size: 24rpx;
+  color: #969696;
+}
+.nav-list-box{
+  padding:0 15%;
+  align-items: center 
+}
+.nav-list-box .nav-box{
+  flex: 1;
+  text-align: center;
+}
+.nav-list-box .nav-box .text{
+  font-size: 28rpx;
+  color: #969696;
+  border-bottom: 8rpx solid #fff;
+  padding: 20rpx 0;
+  display: inline-block
+}
+.nav-list-box .nav-box .active{
+  color: #141414;
+  border-bottom: 8rpx solid #454545;
+  font-weight: bold
+}
+.data-list-box{
+  padding: 0 30rpx;
+}
+.data-list-box .data-box{
+  padding: 30rpx 0;
+}
+.data-list-box .data-box .left{
+  flex: 1
+}
+.data-list-box .data-box .left .img{
+  width: 50rpx;
+  height: 52rpx;
+  display: inline-block;
+}
+.data-list-box .data-box .left .desc-box{
+  padding-left: 30rpx;
+}
+.data-list-box .data-box .left .desc-box .name{
+  font-size: 32rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.data-list-box .data-box .left .desc-box .tip{
+  font-size: 24rpx;
+  color: #969696;
+  padding: 10rpx 0;
+}
+.data-list-box .data-box .right{
+  font-size: 32rpx;
+  color: #E83641
+}

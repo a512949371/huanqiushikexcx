@@ -1,0 +1,29 @@
+<!--pages/my/takeawaymoneylist/takeawaymoneylist.wxml-->
+<view class='page-box'>
+<block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+ <view class='data-box bgfff'>
+  <view class='price'>{{item.price}}</view>
+  <view class='status-box pt20'><text wx:if="{{item.status===0}}">提现失败</text><text class='err' wx:if="{{item.status==1}}">提现成功</text><text wx:if="{{item.status==2}}">审核中</text></view>
+  <view class='desc-box flex-box-bwteen mt40'>
+   <view class='left'>提现金额</view>
+   <view class='right'>{{item.amount}}</view>
+  </view>
+  <view class='desc-box flex-box-bwteen '>
+   <view class='left'>手续费</view>
+   <view class='right'>{{item.fee}}</view>
+  </view>
+  <view class='desc-box flex-box-bwteen '>
+   <view class='left'>提现到</view>
+   <view class='right'>{{item.bankName}}（{{item.bankNo}}）{{item.realName}}</view>
+  </view>
+  <view class='desc-box flex-box-bwteen '>
+   <view class='left'>申请时间</view>
+   <view class='right'>{{item.createTime}}</view>
+  </view>
+  <view class='desc-box flex-box-bwteen '>
+   <view class='left'>完成时间</view>
+   <view class='right'>{{item.updateTime}}</view>
+  </view>
+ </view>
+ </block>
+</view>

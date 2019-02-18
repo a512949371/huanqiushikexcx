@@ -1,0 +1,65 @@
+/* pages/my/transferaccountslist/transferaccountslist.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f0f0f0;
+}
+.bgfff{
+  background-color: #fff;
+}
+.top-nav-box{
+  padding: 0 60rpx;
+}
+.top-nav-box .top-nav{
+  flex: 1;
+  text-align: center;
+  font-size: 26rpx;
+}
+.top-nav-box .top-nav .text{
+  padding: 25rpx 0;
+  color: #646464;
+  display: inline-block;
+  border-bottom: 4rpx solid #fff;
+}
+.top-nav-box .top-nav .active{
+  padding: 25rpx 0;
+  color: #24C37E;
+  border-bottom: 4rpx solid #24C37E;
+}
+.list-box{
+  padding: 0 30rpx;
+}
+.list-box .data-box{
+  padding: 40rpx;
+  border-radius: 15rpx;
+}
+.list-box .data-box .left{
+  flex: 1;
+}
+.list-box .data-box .left .img{
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  overflow: hidden  
+}
+.list-box .data-box .left image{
+  width: 96rpx;
+  height: 96rpx;
+  display: block;
+}
+.list-box .data-box .left .info-box{
+  padding-left: 40rpx;
+}
+.list-box .data-box .left .info-box .order-number{
+  font-size: 32rpx;
+  color: #141414;
+}
+.list-box .data-box .left .info-box .desc{
+  font-size:24rpx;
+  color: #969696
+}
+.list-box .data-box .left .info-box .time{
+  padding: 10rpx 0;
+  font-size:24rpx;
+  color: #969696
+}

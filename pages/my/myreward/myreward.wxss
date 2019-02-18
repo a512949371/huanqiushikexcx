@@ -1,0 +1,118 @@
+/* pages/my/myreward/myreward.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/jiangjinmingxi_bg.png') no-repeat top center #f0f0f0;
+  background-size: contain;
+}
+.bgfff{
+  background-color: #fff
+}
+.top-bg{
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.top-bg .money-box{
+  font-size: 82rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 82rpx;
+}
+.top-bg .money-box .add-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+.top-bg .tip-box{
+  font-size: 24rpx;
+  color: #B9FFE0;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.top-bg .out-btn{
+  width: 100%;
+}
+.top-bg .out-btn .btn{
+  width: 40%;
+  padding: 20rpx 0;
+  color: #24C37E;
+  font-size: 32rpx;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+.top-bg .number-box{
+  border-radius: 15rpx;
+  padding: 30rpx;
+  margin-top: 20rpx;
+}
+.top-bg .number-box .number{
+  flex: 1;
+  text-align: center;
+}
+.top-bg .number-box .number .num{
+  font-size: 36rpx;
+  color: #141414;
+  font-weight: bold;
+}
+.top-bg .number-box .number .desc{
+  font-size: 24rpx;
+  color: #969696;
+}
+.nav-list-box .nav{
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.nav-list-box .nav .text{
+  font-size: 28rpx;
+  color: #969696;
+  padding: 20rpx 0;
+  display: inline-block;
+  border-bottom: 8rpx solid #fff
+}
+.nav-list-box .nav .active{
+  font-weight: bold;
+  color: #141414;
+  border-bottom: 8rpx solid #454545
+}
+.data-list-box .data-box{
+  padding: 20rpx;
+  border-bottom: 20rpx solid #f0f0f0
+}
+.data-list-box .data-box .data-header{
+  padding: 20rpx 0;
+}
+.data-list-box .data-box .data-header .left{
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.data-list-box .data-box .data-header .right{
+  font-size: 24rpx;
+  color: #505050
+}
+.data-list-box .data-box .data-header .right text{
+  font-size: 30rpx;
+  color: #EB333B;
+  font-weight: bold;
+}
+.data-list-box .data-box .desc{
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  color: #969696
+}
+.data-list-box .data-box .desc .tip{
+  font-size: 26rpx;
+  color: #EA6841;
+}
+.data-list-box .data-box .desc .add{
+  padding: 4rpx 10rpx ;
+  background-color: #2AB4F4;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 5rpx;
+  margin-left: 20rpx;
+}

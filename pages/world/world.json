@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Share": "../../template/share/share"
+  },
+  "navigationBarTitleText": "环球时刻",
+  "enablePullDownRefresh": true
+}

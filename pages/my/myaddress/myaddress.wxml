@@ -1,0 +1,49 @@
+<!--pages/my/myaddress/myaddress.wxml-->
+<view class='page-box'>
+  <view class='add-box bgfff'>
+    <view class='add flex-box-bwteen' bindtap='_createadd'>
+      <view class='left flex-box'>
+        <image src='/images/icon_add1.png'></image>
+        <view class='pl20'>手动添加收获地址</view>
+      </view>
+      <image class='right' src='/images/icon_leftq.png'></image>
+    </view>
+    <view class='add flex-box-bwteen' style='border:none' bindtap='_gowxadd'>
+      <view class='left flex-box'>
+        <image src='/images/icon_weixin.png'></image>
+        <view class='pl20'>微信添加</view>
+      </view>
+      <image class='right' src='/images/icon_leftq.png'></image>
+    </view>
+  </view>
+  <image class='add-bottom' src='/images/icon_add-bottom.png'></image>
+  <view class='address-list-box'>
+   <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+    <view class='address-box bgfff'>
+     <view bindtap='changeadd' data-num="{{index}}">
+      <view class='name-box flex-box'>
+        <view class='left'>{{item.realName}}</view>
+        <view class='right'>{{item.phone}}</view>
+      </view>
+      <view class='add-desc-box pt20 flex-box'>
+        <view class='left'>
+          <view class='tip-box' wx:if="{{item.isDefaultAddress}}">默认</view>
+        </view>
+        <view class='right'>
+          <view class='desc'>{{item.address}}</view>
+        </view>
+      </view>
+      </view>
+      <view class='btn-box flex-box-bwteen pt30'>
+       <view class=''>
+       <view class='btn' wx:if="{{!item.isDefaultAddress}}" bindtap='_setdefaultaddress' data-id='{{item.id}}'>设为默认</view>
+       </view>
+       <view class='flex-box-end'>
+         <view class='btn' bindtap='_editadd' data-id='{{item.id}}'>编辑</view>
+         <view class='btn ml20' bindtap='_deleteadd' data-id='{{item.id}}'>删除</view>
+       </view>
+      </view>
+    </view>
+    </block>
+  </view>
+</view>

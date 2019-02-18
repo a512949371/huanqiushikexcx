@@ -1,0 +1,39 @@
+<!--pages/my/myfinance/myfinance.wxml-->
+<view class='page-box'>
+  <view class='top-bg'>
+    <view class='money-box '>{{shopdata.banlance}}</view>
+    <view class='tip-box'>积分余额</view>
+    <view class='number-box bgfff flex-box'>
+      <view class='number'>
+        <view class='num'>{{shopdata.in}}</view>
+        <view class='desc pt20'>收入</view>
+      </view>
+      <view class='number bor-left'>
+        <view class='num'>{{shopdata.out}}</view>
+        <view class='desc pt20'>支出</view>
+      </view>
+    </view>
+  </view>
+  <view class='nav-list-box flex-box bgfff bor-bottom'>
+    <view class='nav-box' bindtap='_changenav' data-type='1'>
+      <text class='text {{navindex==1?"active":""}}'>收入汇总</text>
+    </view>
+    <view class='nav-box' bindtap='_changenav' data-type='2'>
+      <text class='text {{navindex==2?"active":""}}'>支出汇总</text>
+    </view>
+  </view>
+  <view class='data-list-box bgfff'>
+    <block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+      <view class='data-box bor-bottom flex-box-bwteen' style='border:{{shopdatalist.length==index+1?"none":""}}'>
+        <view class='left flex-box'>
+          <image class='img' src='{{item.type==1?"/images/icon_getmoney.png":"/images/icon_usemoney.png"}}'></image>
+          <view class='desc-box'>
+            <view class='name'>{{item.fname}}</view>
+            <view class='tip'>{{item.addTime}}</view>
+          </view>
+        </view>
+        <view class='right'>{{item.amount}}</view>
+      </view>
+    </block>
+  </view>
+</view>

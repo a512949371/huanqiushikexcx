@@ -1,0 +1,57 @@
+/* pages/world/share/share.wxss */
+@import '/app.wxss';
+.shaw{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99
+}
+.share{
+  position: fixed;
+  top: 0;
+  left: 90rpx;
+  right: 90rpx;
+  bottom: 0;
+  z-index: 100
+}
+.share .close-btn{
+  width: 64rpx;
+  height: 64rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+}
+.share .close-btn image{
+  width: 64rpx;
+  height: 64rpx;
+  display: inline-block;
+}
+.share .canvas-box{
+  position: absolute;
+  top: 80rpx;
+  left: 0;
+  right: 0;
+  z-index: 101;
+}
+.btn-box{
+  position: absolute;
+  bottom: 0;
+  left: 45rpx;
+  right: 45rpx;
+  z-index: 101
+}
+.btn-box .btn{
+  flex: 1;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+}
+.btn-box .btn image{
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+}

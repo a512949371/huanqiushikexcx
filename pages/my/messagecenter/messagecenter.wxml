@@ -1,0 +1,50 @@
+<!--pages/my/messagecenter/messagecenter.wxml-->
+<view class='page-box'>
+<block wx:for="{{shopdatalist}}" wx:key="{{item.id}}">
+  <view class='new-box' wx:if="{{item.type=='UPGRADE'}}">
+    <view class='time-box'>{{item.createTime}}</view>
+    <view class='info-box bgfff'>
+      <view class='tit-box'>{{item.title}}</view>
+      <view class='account pt30'>升级账号：{{item.content.account}}</view>
+      <view class='desc-box '>
+       <view class='add'>升级位置：{{item.content.group+item.content.position}}</view>
+       <view class='money pt10'>公排奖励：{{item.content.rankReward}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='new-box' wx:if="{{item.type=='POSITION_CHANGE'}}">
+    <view class='time-box'>{{item.createTime}}</view>
+    <view class='info-box bgfff'>
+      <view class='tit-box'>{{item.title}}</view>
+      <view class='account pt30'>变动账号：{{item.content.account}}</view>
+      <view class='desc-box'>
+       <view class='add'>原来位置：{{item.content.subOriginal+item.content.Position}}</view>
+       <view class='money pt10'>变动位置：{{item.content.subChange+item.content.changePosition}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='new-box' wx:if="{{item.type=='COMPASSIONATE_AWARD'}}">
+    <view class='time-box'>{{item.createTime}}</view>
+    <view class='info-box bgfff'>
+      <view class='tit-box'>{{item.title}}</view>
+      <view class='account pt30'>出局账号：{{item.content.account}}</view>
+      <view class='desc-box'>
+       <view class='add'>出局团位：{{item.content.group}}团</view>
+       <view class='money pt10'>到账金额：{{item.content.rankReward}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='new-box' wx:if="{{item.type=='SUCCESSFULOUT'}}">
+    <view class='time-box'>{{item.createTime}}</view>
+    <view class='info-box bgfff'>
+      <view class='tit-box'>{{item.title}}</view>
+      <view class='account pt30'>出局账号：{{item.content.account}}</view>
+      <view class='desc-box'>
+       <view class='add'>出局团位：{{item.content.group}}团</view>
+       <view class='money pt10'>公排奖金：{{item.content.rankReward}}</view>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+

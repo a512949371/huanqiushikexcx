@@ -1,0 +1,57 @@
+/* pages/my/myvips/myvips.wxss */
+@import '/app.wxss';
+page{
+  min-height: 100%;
+  background-color: #f0f0f0;
+}
+.bgfff{
+  background-color: #fff
+}
+.page-box{
+  padding:0 40rpx;
+}
+.page-box .vip-box{
+  border-radius: 15rpx;
+  padding: 40rpx;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.page-box .vip-box .left{
+  width: 116rpx;
+  height: 116rpx;
+  overflow: hidden;
+  border-radius:50%; 
+}
+.page-box .vip-box .left image{
+  width: 116rpx;
+  height: 116rpx;
+  display: block;
+}
+.page-box .vip-box .right{
+  padding-left: 40rpx;
+  flex: 1
+}
+.page-box .vip-box .right .name-box{
+  font-size: 36rpx;
+  color: #141414;
+}
+.page-box .vip-box .right .vip{
+  font-size: 20rpx;
+  padding: 4rpx 8rpx;
+  color: #FFF348;
+}
+.page-box .vip-box .right .phone{
+  font-size: 26rpx;
+  color: #969696
+}
+.page-box .vip-box .no-use{
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+  background-color: #e6e6e6;
+  padding: 4rpx 20rpx;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+  font-size: 24rpx;
+  color: #b4b4b4 
+}

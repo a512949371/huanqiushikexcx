@@ -1,0 +1,103 @@
+/* pages/register/register.wxss *//* pages/login/login.wxss */
+@import '/app.wxss';
+page{
+  width: 100%;
+  min-height: 100%;
+  background: url('http://qqgpimg.txw18.com/geren_bg.png') no-repeat top center #f0f0f0;
+  background-size:contain;
+}
+.mt60{
+  margin-top: 60rpx;
+}
+.top-bg{
+  padding: 40rpx 20rpx;
+  box-sizing: border-box;
+}
+.top-bg .logo-box{
+  width: 140rpx;
+  height: 140rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fff
+}
+.top-bg .logo-box image{
+  width: 160rpx;
+  height: 160rpx;
+  display: inline-block;
+}
+.top-bg .main{
+  margin-top: -40rpx;
+  background-color: #fff;
+  padding: 40rpx;
+  border-radius: 15rpx;
+}
+.top-bg .main .data-box{
+  align-items: center;
+}
+.top-bg .main .data-box .data-img{
+  width: 44rpx;
+  height: 44rpx;
+  display: inline-block
+}
+.top-bg .main .data-box .bor-box{
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 30rpx;
+  padding: 10rpx 0;
+  flex: 1;
+  align-items: center;
+}
+.top-bg .main .data-box .data{
+  font-size: 26rpx;
+  outline: none;
+  flex: 1
+  
+}
+.top-bg .main .data-box .sms-box{
+  border-left: 1px solid #e5e5e5;
+  padding: 0 20rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  color: #3D4F47
+}
+.top-bg .main .data-box .desc-box{
+  font-size: 26rpx;
+  color: #999;
+}
+.top-bg .main .data-box .desc-box .text{
+  color: #E84343
+}
+.top-bg .rule-box{
+  align-items: center;
+}
+.top-bg .rule-box .rule-img{
+  width: 24rpx;
+  height: 24rpx;
+}
+.top-bg .rule-box .rule-img image{
+  width: 24rpx;
+  height: 24rpx;
+}
+.top-bg .rule-box .rule-desc{
+  font-size: 24rpx;
+  color: #999;
+  padding-left: 20rpx;
+}
+.top-bg .rule-box .rule-desc text{
+  color: #2e88f6
+}
+.subm-btn{
+  width: 80%;
+  padding: 20rpx 0;
+  text-align: center;
+  background-color: #24C37E;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: inherit;
+  border-radius: 50rpx;
+}
+.tip-box{
+  font-size: 24rpx;
+  color: #2E88F6;
+  text-decoration: underline;
+  text-align: center
+}
